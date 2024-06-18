@@ -102,13 +102,17 @@ const Login = () => {
                     required
                   />
                 </div>
-                <div className="container d-inline-flex flex-wrap mt-4">
-                  <input type="checkbox" />
+                <div className="container d-flex justify-content-between flex-wrap">
+                  <div>
+                    <input type="checkbox" />
                   <span className="ms-2 rem">Remember me</span>
-                  <br />
-                  <a href="#" className="text-left ms-auto forgot">
+                  </div>
+                  <div className="">
+                    <a href="#" className="forgot">
                     Forgot password?
                   </a>
+                  </div>
+                  
                 </div>
                 <div className="container mt-5 text-center">
                   <button
@@ -126,7 +130,7 @@ const Login = () => {
                   {error && <div className="alert alert-danger">{error}</div>}
                 </div>
                 <div className="text-center">
-                  <p className="mt-lg-5 mt-md-3">
+                  <p className="mt-lg-5 mt-md-3 mb-5 pb-5">
                     Dont have an account? No worries.{" "}
                     <a className="register fw-bold" href="#">
                       Register now
@@ -135,16 +139,16 @@ const Login = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </form>
-      </div>
-          <div className="partarn position-absolute">
+          <div className="partarn position-absolute bottom-0 start-50 translate-middle-x">
             <img
               src={bottomPattern}
               alt="bottom pattern"
               className="img-fluid"
             />
           </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

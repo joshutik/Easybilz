@@ -1,9 +1,7 @@
-
-
 .login-bg {
     background-image: url(../assets/Login-bg.png);
     background-repeat: no-repeat !important;
-    background-size: 50% !important;
+    background-size: 50% 100%!important;
     min-height: 100vh !important;
     padding-bottom: 8rem !important;
 }
@@ -21,16 +19,14 @@
     margin-top: -80px;
 }
 
-
-
 @media screen and (max-width:766px) {
     .login-bg {
         background-image: url(../assets/Login-bg.png) !important;
         background-repeat: no-repeat !important;
-        /* min-height: 280vh !important; */
         background-size: cover !important;
         background-position: 30% 10% !important;
         color: white !important;
+        padding-bottom: 0rem !important;
     }
     .rem, .forgot {
         color: white !important;
