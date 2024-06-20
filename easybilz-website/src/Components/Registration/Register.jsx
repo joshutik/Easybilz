@@ -170,7 +170,7 @@ const Register = () => {
               <div className="container mt-5 text-center">
                 <button
                   type="submit"
-                  className="bg btn btn-primary border-0 login-btn rounded-5 px-5 fw-bold"
+                  className="bg btn btn-primary border-0 login-btn rounded-5 px-5 fw-bold register-btn"
                   disabled={loading}
                 >
                   {loading ? <TailSpin color="#fff" height={24} width={24} /> : "Continue"}
