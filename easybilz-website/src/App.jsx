@@ -1,16 +1,16 @@
-import './App.css'
+import "./App.css";
+import Calltoaction from "./Components/CallToAction/Calltoaction";
 // import Heropage from './Components/HeroSection/Heropage'
-import Login from './Components/Loginpage/Login'
+// import Login from './Components/Loginpage/Login'
+// import Register from "./Components/Registration/Register";
+// import Footer from "./Components/Footer/Footer";
 
 function App() {
-
-
   return (
     <div>
-      <Login/>
-      {/* <Heropage/> */}
+  <Calltoaction/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
