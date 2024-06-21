@@ -1,5 +1,8 @@
+// import { Navbar } from "react-bootstrap";
 import "./App.css";
-import Review from "./Components/Review/Review";
+import NavBar from './Components/NavigationBar/Navbar'
+// import Review from "./Components/Review/Review";
+// import Services from "./Components/Services/Services";
 // import Calltoaction from "./Components/CallToAction/Calltoaction";
 // import Faq from "./Components/FAQ/Faq";
 // import ContactUs from './Components/ContactUs/Contact'
@@ -11,11 +14,13 @@ import Review from "./Components/Review/Review";
 function App() {
   return (
     <div>
+      <NavBar/>
   {/* <Calltoaction/> */}
   {/* <ContactUs/> */}
     {/* <Faq/> */}
   {/* <Register/> */}
-  <Review/>
+  {/* <Review/> */}
+  {/* <Services/> */}
     </div>
   );
 }
