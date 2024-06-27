@@ -159,8 +159,11 @@ import './RegPayment.css';
 import logo from "../assets/Logo.png";
 import topPattern from "../assets/upPattern.png";
 import bottomPattern from "../assets/Patterns.png";
+import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const RegPayment = () => {
+  // const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -188,7 +191,7 @@ const RegPayment = () => {
     event.preventDefault();
     if (selectedFile) {
       console.log("File selected:", selectedFile);
-      // onNext();
+      // navigate('/login-acount');
     } else {
       console.log("No file selected");
     }
@@ -221,9 +224,9 @@ const RegPayment = () => {
               <img src={topPattern} alt="top pattern" className="img-fluid" />
             </div>
             <div className="container my-5">
-              <a href="#" className="ms-5 text-decoration-none">
+              <Link to={'/register'} className="ms-5 text-decoration-none">
               <i className="bi bi-chevron-left"></i> Go back
-              </a>
+              </Link>
             </div>
             <h2 className="fw-bold text-center">Register</h2>
             <div className="w-75 mx-auto">

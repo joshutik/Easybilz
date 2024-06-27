@@ -5,8 +5,12 @@ import topPattern from "../assets/upPattern.png";
 import bottomPattern from "../assets/Patterns.png";
 import logo from "../assets/Logo.png";
 import { TailSpin } from "react-loader-spinner";
+import {Link, useNavigate } from "react-router-dom";
+
 
 const Register = () => {
+
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [otherNames, setOtherNames] = useState("");
   const [middleName, setMiddleName] = useState("");
@@ -50,6 +54,7 @@ const Register = () => {
 
       const data = await response.json();
       console.log('Registration successful:', data);
+      navigate('/reg-payment');
 
       // Redirect or update state to show user is registered
     } catch (err) {
@@ -183,9 +188,9 @@ const Register = () => {
               <div className="text-center">
                 <p className="mt-lg-5 mt-md-3 mb-5 pb-3">
                   Already have an account? That&apos;s nice. 
-                  <a className="register fw-bold ms-1" href="#">
+                  <Link to={'/login-acount'} className="register fw-bold ms-1">
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

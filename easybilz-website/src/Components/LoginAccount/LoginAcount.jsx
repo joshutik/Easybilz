@@ -5,7 +5,7 @@ import bottomPattern from "../assets/Patterns.png";
 import logo from "../assets/Logo.png";
 import thumbs from "../assets/ThumbsUp.png";
 import { Link } from "react-router-dom";
-import Login from "../Loginpage/Login";
+
 
 // import { TailSpin } from "react-loader-spinner";
 
@@ -17,7 +17,7 @@ const Register = () => {
           <div className="container-fluid col-md-6 col-sm-12">
             <div className="container text-light mt-5">
               <div className="position-absolute top-0 bottom-0 mt-4 ms-auto ms-lg-5">
-                <a className="" href="#">
+                <Link to={'/'} className="" >
                   <img
                     src={logo}
                     alt="EasyBilz"
@@ -25,7 +25,7 @@ const Register = () => {
                     height="100"
                     className="img-fluid"
                   />
-                </a>
+                </Link>
               </div>
               <p className="fs-3 px-4 pt-5 mt-5">
                 Freedom starts with financial security. Grow yours today.
@@ -37,9 +37,9 @@ const Register = () => {
               <img src={topPattern} alt="top pattern" className="img-fluid" />
             </div>
             <div className="container my-5">
-              <a href="#" className="ms-5 text-decoration-none">
+              <Link to={'reg-payment'} className="ms-5 text-decoration-none">
               <i className="bi bi-chevron-left"></i> Go back
-              </a>
+              </Link>
             </div>
             <h2 className="fw-bold text-center">Register</h2>
             <div className="w-75 mx-auto">
@@ -62,7 +62,7 @@ const Register = () => {
                   </div>
 
                   <div className="container my-5 text-center">
-                    <Link to={Login}
+                    <Link to={'/login-acount'}
                       type="submit"
                       className="bg btn btn-primary border-0 login-btn rounded-5 px-5 fw-bold register-btn"
                     >
