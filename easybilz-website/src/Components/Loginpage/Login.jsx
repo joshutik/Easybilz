@@ -4,11 +4,12 @@ import topPattern from "../assets/upPattern.png";
 import bottomPattern from "../assets/Patterns.png";
 import logo from "../assets/Logo.png";
 import { TailSpin } from "react-loader-spinner";
-// import { Link } from 'react-router-dom';
-// import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+const apiHostname = import.meta.env.VITE_API_HOSTNAME || 'https://easybilz-api.onrender.com';
 
 const Login = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,7 +20,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://dummyjson.com/auth/login", {
+      const response = await fetch(`${apiHostname}/user/login/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -35,10 +36,9 @@ const Login = () => {
 
       // Handle successful login, e.g., set user session/token
       console.log("Login successful:", data);
-      // navigate("/loginpage");
+      navigate("/reg-payment");
       localStorage.setItem("token", data.token);
 
-      // Redirect or update state to show user is logged in
     } catch (err) {
       setError("Invalid email or password. Please try again.");
       console.error("Login error:", err);
@@ -136,9 +136,9 @@ const Login = () => {
                 <div className="text-center">
                   <p className="mt-lg-5 mt-md-3 mb-5 pb-5">
                     Don&apos;t have an account? No worries.{" "}
-                    <a className="register fw-bold" href="#">
+                    <Link className="register fw-bold" to="/register">
                       Register now
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>

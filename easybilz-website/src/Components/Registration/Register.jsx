@@ -20,6 +20,9 @@ const Register = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const apiHostname = import.meta.env.VITE_API_HOSTNAME || 'https://easybilz-api.onrender.com';
+
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -32,7 +35,8 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('https://dummyjson.com/users/add', {
+      //const response = await fetch('https://dummyjson.com/users/add', {
+        const response = await fetch(`${apiHostname}/user/create/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +58,7 @@ const Register = () => {
 
       const data = await response.json();
       console.log('Registration successful:', data);
-      navigate('/reg-payment');
+      navigate('/login-acount');
 
       // Redirect or update state to show user is registered
     } catch (err) {
