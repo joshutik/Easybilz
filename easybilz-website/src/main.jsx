@@ -8,6 +8,7 @@ import './index.css';
 import App from './App';
 import Login from './Components/Loginpage/Login';
 import RegPayment from './Components/RegPayment/RegPayment'
+import Heropage from './Components/HeroSection/Heropage'
 import LoginAccount from './Components/LoginAccount/LoginAcount'
 import Register from './Components/Registration/Register';
 import Main from './Components/Main/Main';
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/login-acount",
+    path: "/login",
     element: <Login/>,
+  },
+  {
+    path: "/heropage",
+    element: <Heropage/>,
   },
   {
     path: "/register",
@@ -30,7 +35,7 @@ const router = createBrowserRouter([
     element: <RegPayment/>,
   },
   {
-    path: "/login-acount",
+    path: "/login-account",
     element: <LoginAccount/>,
   },
   {
