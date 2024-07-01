@@ -55,7 +55,7 @@ const Login = () => {
             <div className="container-fluid col-md-6 col-sm-12">
               <div className="container text-light mt-5">
                 <div className="position-absolute top-0 bottom-0 mt-4 ms-auto ms-lg-5">
-                  <a className="" href="#">
+                  <Link to={'/homepage'}>
                     <img
                       src={logo}
                       alt="EasyBilz"
@@ -63,7 +63,7 @@ const Login = () => {
                       height="100"
                       className="img-fluid"
                     />
-                  </a>
+                  </Link>
                 </div>
 
                 <p className="fs-3 px-4 pt-5 mt-5">

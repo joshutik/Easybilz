@@ -58,7 +58,7 @@ const Register = () => {
 
       const data = await response.json();
       console.log('Registration successful:', data);
-      navigate('/login-acount');
+      navigate('/reg-payment');
 
       // Redirect or update state to show user is registered
     } catch (err) {
@@ -76,15 +76,15 @@ const Register = () => {
           <div className="container-fluid col-md-6 col-sm-12">
             <div className="container text-light mt-5">
               <div className="position-absolute top-0 bottom-0 mt-4 ms-auto ms-lg-5">
-                <a className="" href="#">
-                  <img
-                    src={logo}
-                    alt="EasyBilz"
-                    width="170"
-                    height="100"
-                    className="img-fluid"
-                  />
-                </a>
+              <Link to={'/homepage'}>
+                    <img
+                      src={logo}
+                      alt="EasyBilz"
+                      width="170"
+                      height="100"
+                      className="img-fluid"
+                    />
+                  </Link>
               </div>
               <p className="fs-3 px-4 pt-5 mt-5">
                 Freedom starts with financial security. Grow yours today.

@@ -10,6 +10,7 @@ import Login from './Components/Loginpage/Login';
 import RegPayment from './Components/RegPayment/RegPayment'
 import LoginAccount from './Components/LoginAccount/LoginAcount'
 import Register from './Components/Registration/Register';
+import Main from './Components/Main/Main';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/login-acount",
     element: <LoginAccount/>,
+  },
+  {
+    path: "/homepage",
+    element: <Main/>,
   },
 ]);
 
